@@ -80,9 +80,9 @@ process.stdin.on('data', function(data) {
             consulta.data = Number(resposta);
 
             process.stdout.write("Gerando o id dessa consulta: ");
-            id_aux = Math.floor((Math.random() * 10000) + 1);
             
             do {
+                id_aux = Math.floor((Math.random() * 10000) + 1);
                 if(lista_consultas != 0) {
                     for(let i = 0; i < lista_consultas.length; i++) {
                         if(lista_consultas[i].id == id_aux) {
